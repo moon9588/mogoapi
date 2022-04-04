@@ -9,8 +9,7 @@ app.use(express.static('public'));
 app.use(require('./routes'));
 
 mongoose.connect(process.env.MONGOOB_URI || 'mongodb://localhost/umberlla-soical-network',{
-    useNewUrlParser: true,
-    useUnifiedTropology: true
+
 });
 
 mongoose.set('debug', true);

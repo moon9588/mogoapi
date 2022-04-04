@@ -1,6 +1,6 @@
 const router = require('express').Router();
 
-const { Model } = require('sequelize/types');
+const { Model } = require('sequelize');
 const{
     createUsers,
     getAllUsers,
@@ -17,7 +17,7 @@ router
     .post(createUsers);
 router
     .route('/:id')
-    .get(getUsersById)
+    // .get(getUsersById)
     .put(updateUsers)
     .delete(deleteUsers);
 router
@@ -25,4 +25,4 @@ router
     .post(addFriend)
     .delete(deleteFriend);
 
-Model.exports = router;
+module.exports = router;
